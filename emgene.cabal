@@ -1,0 +1,45 @@
+name:                emgene
+version:             0.1.0.0
+build-type:          Simple
+cabal-version:       >=1.10
+license:             MIT
+license-file:        LICENSE
+copyright:           (c) 2014 Stefan Haller
+author:              Stefan Haller
+homepage:            https://github.com/haliner/emgene
+
+executable emgene
+  main-is:
+    Main.hs
+
+  other-modules:
+    Alternative
+    EM
+    Formatting
+    Parser
+    PWM
+    Util
+
+  build-depends:
+    base                 == 4.6.*,
+    bifunctors           == 4.1.*,
+    hmatrix              == 0.15.*,
+    parallel             == 3.2.*,
+    parsec               == 3.1.*,
+    parsec-utils         == 0.1.*,
+    optparse-applicative == 0.7.*,
+    random               == 1.0.*,
+    split                == 0.2.*
+
+  hs-source-dirs:
+    src
+
+  default-language:
+    Haskell2010
+
+  ghc-options:
+    -Wall
+    -threaded
+    -with-rtsopts=-N
+
+-- vim: set ts=2 sts=2 sw=2 et:
